@@ -8,4 +8,12 @@ describe("Probando promesas", () => {
             done();
         });
     })
+
+    test("Resuleve un hola", () => {
+        return expect(Promise.resolve("Hola!")).resolves.toBe("Hola!")
+    });
+
+    test("Rechaza con un error", () => {
+        return expect(Promise.reject("Error")).rejects.toBe("Error");
+    })
 })
